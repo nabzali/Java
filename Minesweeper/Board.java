@@ -15,7 +15,7 @@ public class Board {
     public void initialiseAll(){
         for (int i = 0; i < PsynsaMain.HEIGHT; i++){
             for (int j = 0; j < PsynsaMain.WIDTH; j++){
-                buttonArray[i][j].initialise(Color.gray);
+                buttonArray[i][j].initialise();
             }
         }
     }
@@ -67,9 +67,7 @@ public class Board {
                 catch (IndexOutOfBoundsException e){
                     continue;
                 }
-                if ((getButton(i, j) != getButton(x, y)) && (getButton(i, j).isMine)){
-                    mine_count++;
-                }
+                if ((getButton(i, j) != getButton(x, y)) && (getButton(i, j).isMine)) mine_count++; //if button is not the middle one and is mine, add 1 to count
             }
         }
         return mine_count;

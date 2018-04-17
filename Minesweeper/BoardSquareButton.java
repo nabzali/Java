@@ -9,11 +9,11 @@ public class BoardSquareButton extends JButton
     public BoardSquareButton() {
         setMinimumSize(new Dimension(120, 120));
         setPreferredSize(new Dimension(120, 120));
-        initialise(Color.gray);
+        this.initialise();
     }
 
-    public void initialise(Color bgColour){
-        this.setBackground(bgColour);
+    public void initialise(){
+        this.setBackground(Color.gray);
         this.setFont(new Font("Calibri",Font.BOLD, 60));
         this.setText("?"); //"("+this.x+", "+this.y+")"
         this.investigated = false;
