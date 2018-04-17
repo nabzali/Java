@@ -6,8 +6,7 @@ public class BoardSquareButton extends JButton
 
     boolean isMine, investigated, userSuggestedMine;
 
-
-    public BoardSquareButton(int x, int y) {//, Color bgColour){
+    public BoardSquareButton() {
         setMinimumSize(new Dimension(120, 120));
         setPreferredSize(new Dimension(120, 120));
         initialise(Color.gray);
@@ -21,6 +20,7 @@ public class BoardSquareButton extends JButton
         this.userSuggestedMine = false;
         this.isMine = false;
     }
+
     public void setMine(){
         this.isMine = true;
         //this.setBackground(Color.yellow);
@@ -36,6 +36,4 @@ public class BoardSquareButton extends JButton
         this.setText("X");
         this.setBackground(Color.orange);
     }
-
-
 }

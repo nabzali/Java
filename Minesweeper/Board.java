@@ -1,11 +1,9 @@
 import java.awt.*;
 import java.util.Random;
 
-
 public class Board {
 
     private BoardSquareButton buttonArray[][] = new BoardSquareButton[PsynsaMain.HEIGHT][PsynsaMain.WIDTH];
-
     public BoardSquareButton getButton(int x, int y){
         return buttonArray[x][y];
     }
@@ -74,63 +72,6 @@ public class Board {
                 }
             }
         }
-
-        /*
-        if ((x > 0) && (x < PsynsaMain.HEIGHT - 1) && (y > 0) && (y < PsynsaMain.WIDTH - 1)){ //checking middle buttons
-            for (int i = y-1; i < y+2; i++){
-                if (getButton(x-1, i).isMine) mine_count++;
-                if (getButton(x+1, i).isMine) mine_count++;
-            }
-            if (getButton(x, y-1).isMine) mine_count++;
-            if (getButton(x, y+1).isMine) mine_count++;
-        }
-        if ((x == 0) && (y < PsynsaMain.WIDTH - 1) && (y > 0)){
-            for (int i = y-1; i < y+2; i++) if (getButton(x+1, i).isMine) mine_count++;
-            if (getButton(x, y-1).isMine) mine_count++;
-            if (getButton(x, y+1).isMine) mine_count++;
-        }
-
-        if ((x == PsynsaMain.HEIGHT - 1) && (y < PsynsaMain.WIDTH - 1) && (y > 0)){
-            for (int i = y-1; i < y+2; i++) if (getButton(x-1, i).isMine) mine_count++;
-            if (getButton(x, y-1).isMine) mine_count++;
-            if (getButton(x, y+1).isMine) mine_count++;
-        }
-
-
-        if ((y == 0) && (x < PsynsaMain.HEIGHT - 1) && (x > 0)){
-            for (int i = x-1; i < x+2; i++) if (getButton(i, y+1).isMine) mine_count++;
-            if (getButton(x-1, y).isMine) mine_count++;
-            if (getButton(x+1, y).isMine) mine_count++;
-        }
-
-        if ((y == PsynsaMain.WIDTH - 1) && (x < PsynsaMain.HEIGHT - 1) && (x > 0)){
-            for (int i = x-1; i < x+2; i++) if (getButton(i, y-1).isMine) mine_count++;
-            if (getButton(x-1, y).isMine) mine_count++;
-            if (getButton(x+1, y).isMine) mine_count++;
-        }
-
-        if ((x == 0) && (y == 0)){
-            if (getButton(x+1,y).isMine) mine_count++;
-            if (getButton(x+1,y+1).isMine) mine_count++;
-            if (getButton(x,y+1).isMine) mine_count++;
-        }
-        if ((x == 0) && (y == PsynsaMain.WIDTH - 1)){
-            if (getButton(x+1,y).isMine) mine_count++;
-            if (getButton(x+1,y-1).isMine) mine_count++;
-            if (getButton(x,y-1).isMine) mine_count++;
-        }
-        if ((x == PsynsaMain.HEIGHT - 1) && (y == 0)){
-            if (getButton(x,y+1).isMine) mine_count++;
-            if (getButton(x-1,y+1).isMine) mine_count++;
-            if (getButton(x-1,y).isMine) mine_count++;
-        }
-        if ((x == PsynsaMain.HEIGHT - 1) && (y == PsynsaMain.WIDTH - 1)){
-            if (getButton(x,y-1).isMine) mine_count++;
-            if (getButton(x-1,y-1).isMine) mine_count++;
-            if (getButton(x-1,y).isMine) mine_count++;
-        }
-        */
         return mine_count;
     }
-
 }
