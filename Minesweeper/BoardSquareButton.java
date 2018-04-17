@@ -3,16 +3,14 @@ import java.awt.*;
 
 public class BoardSquareButton extends JButton
 {
-    private int x, y;
-    public boolean isMine, investigated, userSuggestedMine;
 
-    public BoardSquareButton(int width, int height, int x, int y) {//, Color bgColour){
-        setMinimumSize(new Dimension(width, height));
-        setPreferredSize(new Dimension(width, height));
-        this.x = x;
-        this.y = y;
+    boolean isMine, investigated, userSuggestedMine;
+
+
+    public BoardSquareButton(int x, int y) {//, Color bgColour){
+        setMinimumSize(new Dimension(120, 120));
+        setPreferredSize(new Dimension(120, 120));
         initialise(Color.gray);
-
     }
 
     public void initialise(Color bgColour){
@@ -23,17 +21,20 @@ public class BoardSquareButton extends JButton
         this.userSuggestedMine = false;
         this.isMine = false;
     }
-
     public void setMine(){
         this.isMine = true;
+        //this.setBackground(Color.yellow);
     }
 
     public void setInvestigated(){
         this.investigated = true;
+        this.setBackground(Color.green);
     }
 
     public void setUserSuggestedMine(){
         this.userSuggestedMine = true;
+        this.setText("X");
+        this.setBackground(Color.orange);
     }
 
 
