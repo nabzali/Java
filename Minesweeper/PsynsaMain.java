@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class PsynsaMain{
 
-    public final static int WIDTH = 10, HEIGHT = 10, NUM_MINES = 5;
+    public final static int WIDTH = 10, HEIGHT = 7, NUM_MINES = 7;
     public Board board = new Board();
 
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class PsynsaMain{
                     try{
                         board.getButton(k, l);
                     }
-                    catch (Exception e2){
+                    catch (IndexOutOfBoundsException e2){
                         continue;
                     }
                     if ((board.getButton(k, l) != board.getButton(x, y)) && (!board.getButton(k, l).investigated)){

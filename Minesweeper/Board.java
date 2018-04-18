@@ -4,6 +4,7 @@ import java.util.Random;
 public class Board {
 
     private BoardSquareButton buttonArray[][] = new BoardSquareButton[PsynsaMain.HEIGHT][PsynsaMain.WIDTH];
+
     public BoardSquareButton getButton(int x, int y){
         return buttonArray[x][y];
     }
@@ -62,12 +63,12 @@ public class Board {
         for (int i = x-1; i < x+2; i++){
             for (int j = y-1; j < y+2; j++){
                 try{
-                    getButton(i, j);
+                    this.getButton(i, j);
                 }
                 catch (IndexOutOfBoundsException e){
                     continue;
                 }
-                if ((getButton(i, j) != getButton(x, y)) && (getButton(i, j).isMine)) mine_count++; //if button is not the middle one and is mine, add 1 to count
+                if ((this.getButton(i, j) != this.getButton(x, y)) && (this.getButton(i, j).isMine)) mine_count++; //if button is not the middle one and is mine, add 1 to count
             }
         }
         return mine_count;

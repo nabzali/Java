@@ -9,6 +9,7 @@ public class BoardSquareButton extends JButton
     public BoardSquareButton() {
         setMinimumSize(new Dimension(120, 120));
         setPreferredSize(new Dimension(120, 120));
+        this.setFocusPainted(false);
         this.initialise();
     }
 
