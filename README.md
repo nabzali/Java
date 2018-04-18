@@ -12,4 +12,4 @@ What's included?
 
 <img src = "https://github.com/nabzali/Java/blob/master/Minesweeper/capture1.PNG?raw=true" width = "250px" height = "260px">
 
-
+**April 2018 | Nabeel Ali**
