@@ -5,7 +5,7 @@ import java.awt.event.*;
 
 public class PsynsaMain{
 
-    public final static int WIDTH = 10, HEIGHT = 7, NUM_MINES = 7;
+    public final static int WIDTH = 5, HEIGHT = 5, NUM_MINES = 5;
     public Board board = new Board();
 
     public static void main(String[] args) {
