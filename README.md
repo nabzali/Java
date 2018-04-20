@@ -6,7 +6,7 @@
 
 What's included?
 --
-- Minesweeper - I have developed my own version of the well known game [Minesweeper](https://github.com/nabzali/Java/tree/master/Minesweeper). Included is 3 source code files: *Board.java*, *BoardSquareButton.java* and *PsynsaMain.java*
+- [Minesweeper](https://github.com/nabzali/Java/tree/master/Minesweeper) - I have developed my own version of the well known game Minesweeper. Included is 3 source code files: *Board.java*, *BoardSquareButton.java* and *PsynsaMain.java*
 
 Minesweeper
 --
